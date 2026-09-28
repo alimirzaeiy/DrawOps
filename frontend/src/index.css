@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+body {
+  background-color: #121214;
+  color: #e6e6e6;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  overflow: hidden;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbars with terminal aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121214;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27c93f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #39ff14;
+}
+
+/* React Flow custom dark styling */
+.react-flow__background {
+  background-color: #0d0d0f !important;
+}
+
+.react-flow__controls-button {
+  background-color: #1a1a1e !important;
+  border-bottom: 1px solid #27c93f !important;
+  fill: #27c93f !important;
+}
+
+.react-flow__controls-button:hover {
+  background-color: #25252b !important;
+}
+
+.react-flow__attribution {
+  display: none !important;
+}
