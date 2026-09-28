@@ -8,8 +8,8 @@ if (existing.count === 0) {
   
   // Sample Server 1: Web & DB Cluster
   db.prepare(`
-    INSERT INTO servers (id, name, host, port, username, auth_type, position_x, position_y, status, created_at, last_connected)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO servers (id, name, host, port, username, auth_type, position_x, position_y, status, product_group, created_at, last_connected)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `).run(
     'srv_demo_1',
     'prod-web-eu',
@@ -20,6 +20,7 @@ if (existing.count === 0) {
     100,
     120,
     'online',
+    'Web Services',
     now,
     now
   );
@@ -120,8 +121,8 @@ networks:
 
   // Sample Server 2: Database & Backup
   db.prepare(`
-    INSERT INTO servers (id, name, host, port, username, auth_type, position_x, position_y, status, created_at, last_connected)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO servers (id, name, host, port, username, auth_type, position_x, position_y, status, product_group, created_at, last_connected)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `).run(
     'srv_demo_2',
     'db-cluster-node-1',
@@ -132,6 +133,7 @@ networks:
     480,
     120,
     'cached',
+    'Databases',
     now,
     now
   );

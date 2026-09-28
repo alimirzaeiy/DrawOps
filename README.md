@@ -10,6 +10,40 @@
 
 ---
 
+## 📸 Screenshots
+
+<p align="center">
+  <b>1. Multi-Server Grouping on Infinite Canvas</b><br/>
+  <i>Organize servers into color-coded product groups (Web Services, Databases, Monitoring) with draggable dashed bounding frames and top Chrome-style tabs.</i><br/>
+  <img src="docs/screenshots/01-three-groups-overview.png" alt="Multi-Server Grouping Overview" width="95%" />
+</p>
+
+<br/>
+
+<p align="center">
+  <b>2. Single Server Explorer & <code>/srv</code> Tree Drawer</b><br/>
+  <i>Deep inspect server filesystem, browse directory trees, review Docker services, and manage /home backups from the right drawer.</i><br/>
+  <img src="docs/screenshots/02-single-server-drawer.png" alt="Single Server Explorer Drawer" width="95%" />
+</p>
+
+<br/>
+
+<p align="center">
+  <b>3. Step-by-Step Visual Canvas <code>/srv</code> Expansion</b><br/>
+  <i>Expand folders and configuration files directly in front of the server node on the canvas with interactive color-coded connectors.</i><br/>
+  <img src="docs/screenshots/03-single-server-canvas-folders.png" alt="Canvas /srv Directory Expansion" width="95%" />
+</p>
+
+<br/>
+
+<p align="center">
+  <b>4. Integrated Web Terminal with Native OpenSSH & Hardware Key Support</b><br/>
+  <i>Run interactive SSH sessions with full support for ECDSA-SK physical security keys, passphrases, and ~/.ssh/config aliases.</i><br/>
+  <img src="docs/screenshots/04-three-groups-with-terminal.png" alt="Canvas with Integrated Terminal" width="95%" />
+</p>
+
+---
+
 ## ✨ Features
 
 ### 🎨 Draw.io Canvas Interface
@@ -91,8 +125,8 @@ server-manager/
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/server-manager.git
-cd server-manager
+git clone https://github.com/alimirzaeiy/DrawOps.git
+cd DrawOps
 
 # Install all dependencies (root, backend, frontend)
 npm install

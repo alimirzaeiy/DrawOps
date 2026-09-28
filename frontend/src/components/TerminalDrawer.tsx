@@ -46,7 +46,8 @@ export const TerminalDrawer: React.FC<TerminalDrawerProps> = ({
       term.writeln(`\x1b[90mTip: When prompted, enter key passphrase and touch your physical security key (FIDO2 / ECDSA-SK).\x1b[0m\r\n`);
     }
 
-    const wsUrl = `ws://localhost:3001/ws/terminal?serverId=${server.id}`;
+    const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const wsUrl = `${wsProtocol}//${window.location.host}/ws/terminal?serverId=${server.id}`;
     const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
 

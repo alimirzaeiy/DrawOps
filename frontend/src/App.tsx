@@ -35,7 +35,7 @@ import {
   LayoutGrid,
 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:3001/api';
+const API_BASE = '/api';
 
 // Vibrant macOS terminal palette for distinct product group bounding boxes
 const GROUP_PALETTE = [
@@ -73,7 +73,7 @@ export default function App() {
   const [selectedGroup, setSelectedGroup] = useState<string>('ALL');
 
   // List of all created product groups (persisted in SQLite product_groups table)
-  const [groupsList, setGroupsList] = useState<string[]>(['General']);
+  const [groupsList, setGroupsList] = useState<string[]>([]);
 
   // Preselected group when opening AddServerModal
   const [modalInitialGroup, setModalInitialGroup] = useState<string>('General');
@@ -563,9 +563,12 @@ export default function App() {
 
   // Compute all unique known product groups (union of DB groups and servers)
   const allKnownGroups = useMemo(() => {
-    const set = new Set<string>(groupsList);
-    set.add('General');
-    servers.forEach((s) => set.add(s.product_group || 'General'));
+    const set = new Set<string>(groupsList.filter(g => g !== 'General'));
+    servers.forEach((s) => {
+      if (s.product_group) set.add(s.product_group);
+    });
+    // If no groups exist at all, fallback to General
+    if (set.size === 0) set.add('General');
     return Array.from(set);
   }, [groupsList, servers]);
 

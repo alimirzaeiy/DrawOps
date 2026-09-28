@@ -38,7 +38,7 @@ export const AddServerModal: React.FC<AddServerModalProps> = ({
 
   // Fetch all host aliases from ~/.ssh/config
   useEffect(() => {
-    fetch('http://localhost:3001/api/ssh/hosts')
+    fetch('/api/ssh/hosts')
       .then((res) => res.json())
       .then((data) => {
         if (data.success && Array.isArray(data.hosts)) {
@@ -55,7 +55,7 @@ export const AddServerModal: React.FC<AddServerModalProps> = ({
 
     // Resolve details using backend ssh -G
     try {
-      const res = await fetch(`http://localhost:3001/api/ssh/resolve?alias=${encodeURIComponent(alias)}`);
+      const res = await fetch(`/api/ssh/resolve?alias=${encodeURIComponent(alias)}`);
       const data = await res.json();
       if (data.success && data.config) {
         if (data.config.user) setUsername(data.config.user);
@@ -81,7 +81,7 @@ export const AddServerModal: React.FC<AddServerModalProps> = ({
     setError(null);
 
     try {
-      const res = await fetch('http://localhost:3001/api/servers', {
+      const res = await fetch('/api/servers', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
