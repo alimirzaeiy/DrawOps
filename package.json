@@ -1,7 +1,7 @@
 {
-  "name": "server-manager-root",
+  "name": "drawops",
   "version": "1.0.0",
-  "description": "Server Manager with draw.io canvas, Apple Terminal aesthetic, and strict safety",
+  "description": "Interactive infinite canvas for SSH server management, /srv directory exploration, Docker inspection, and web terminal.",
   "scripts": {
     "dev:backend": "npm --prefix backend run dev",
     "dev:frontend": "npm --prefix frontend run dev",

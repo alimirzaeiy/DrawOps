@@ -1,11 +1,11 @@
-# 🖥️ Server Manager
+# 🎨 DrawOps
 
-> A visual, interactive server operations platform with a **Draw.io-style canvas** and an authentic **Apple macOS Terminal aesthetic**.
+> **Interactive infinite canvas for SSH server management, /srv directory exploration, Docker inspection, and web terminal.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 <p align="center">
-  <em>Manage your servers visually — drag, drop, explore, and edit — with zero-delete safety guarantees.</em>
+  <em>Visual server operations on an infinite canvas with Apple Terminal aesthetics, live SSH & zero-delete safety.</em>
 </p>
 
 ---

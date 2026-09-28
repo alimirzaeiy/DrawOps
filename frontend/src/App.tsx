@@ -776,7 +776,7 @@ export default function App() {
           {/* oh-my-zsh Apple theme prompt representation */}
           <div className="flex items-center space-x-2 pl-2 text-xs">
             <span className="text-term-apple font-bold text-sm"></span>
-            <span className="text-gray-300 font-mono">~/server-manager/</span>
+            <span className="text-gray-300 font-mono">~/drawops/</span>
             <span className="text-purple-400 font-bold font-mono">[master+]</span>
             <span className="text-term-green font-bold pl-1">draw.io canvas</span>
           </div>

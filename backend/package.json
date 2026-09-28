@@ -1,7 +1,7 @@
 {
-  "name": "server-manager-backend",
+  "name": "drawops-backend",
   "version": "1.0.0",
-  "description": "Backend API, SSH manager and security guardian for Server Manager",
+  "description": "Backend API, SSH manager and security guardian for DrawOps",
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
